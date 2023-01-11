@@ -35,12 +35,10 @@ function shapeDelay() {
     setTimeout(shapeCreator, Math.random()*2000);
 }
 
-shapeDelay();
-
 shape.onclick = function() {
     shape.style.display = "none";
     let end = new Date().getTime();
     let tCounter = (end-start)/1000;
     tCounterId.innerHTML = tCounter +"s";
-    shapeCreator(); 
+    shapeDelay();
 }
