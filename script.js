@@ -1,6 +1,6 @@
 let start = new Date().getTime();
 let shape = document.getElementById("shape")
-let tCounterId = document.getElementById("tCounterPlace");
+let tCounterId = document.getElementById("tCounterId");
 
 function colorRNG() {
     let letter = "0123456789ABCDEF";
@@ -8,6 +8,7 @@ function colorRNG() {
     for (let i = 0; i < 6; i++) {
         color+=letter[Math.floor(Math.random()*16)];
     }
+    console.log("actual color : " + color)
     return color;
 }
 
@@ -39,6 +40,6 @@ shape.onclick = function() {
     shape.style.display = "none";
     let end = new Date().getTime();
     let tCounter = (end-start)/1000;
-    tCounterId.innerHTML = tCounter +"s";
+    tCounterId.innerHTML = tCounter + "s";
     shapeDelay();
 }
